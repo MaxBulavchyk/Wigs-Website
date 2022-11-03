@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 250px auto;
+    background: #eee;
+    height: 100%;
+}
+
+.sidebar {
+    background: #FFFFFF;
+    border-radius: 0 20px 20px 0;
+    padding: 20px;
+}
+
+.content {
+    max-width: 1099px;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "img1 img1 img3 img4"
+    "img2 img2 img3 img4"
+    "img5 img6 img7 img7"
+    "img5 img6 img8 img8";
+}
+
+@media (max-width: 992px){
+    .wrapper {
+        grid-template-columns: auto;
+    }
+    .sidebar {
+        display: none;
+    }
+    .content {
+        grid-template-areas: 
+        "img1 img1"
+        "img2 img2"
+        "img3 img4"
+        "img3 img4"
+        "img5 img6"
+        "img5 img6"
+        "img7 img7"
+        "img8 img8"
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+    position: relative;
+}
+.img4 {
+    grid-area: img4;
+    position: relative;
+}
+.img5 {
+    grid-area: img5;
+    position: relative;
+}
+.img6 {
+    grid-area: img6;
+    position: relative;
+}
+.img7 {
+    grid-area: img7;
+}
+.img8 {
+    grid-area: img8;
+}
+
+.circle1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 20px 0 0;
+}
+
+
+
+
+
